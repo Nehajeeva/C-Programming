@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <ctype.h>
+int main(){
+    int i;
+    char s[100],u;
+    fgets(s,sizeof(s),stdin);
+    for(i=0;s[i]!='\0'&&s[i+1]!='\0';i+=2){
+        u=s[i];
+        s[i]=s[i+1];
+        s[i+1]=u;
+    }
+    for(i=0;s[i]!='\0';i++){
+        printf("%c",s[i]);
+    }
+    return 0;
+}
